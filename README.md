@@ -1,1 +1,1 @@
-# StreamLit-Apple-Stocks
+# StreamLit-App
