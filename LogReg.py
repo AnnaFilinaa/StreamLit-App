@@ -73,7 +73,7 @@ if uploaded_file is not None:
     
     plot_type = st.selectbox('Select plot type', ['Scatterplot', 'Bar plot', 'Line plot'])
     x_column = st.selectbox('Select x column', feature_columns)
-    y_column = st.selectbox('Select y column', feature_columns)
+    y_column = st.selectbox('Select y column', target_column)
     if plot_type == 'Scatterplot':
         fig = scatterplot(x_column, y_column, data)
     elif plot_type == 'Bar plot':
