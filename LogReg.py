@@ -58,7 +58,7 @@ st.title('Logistic Regression Demo')
 
 uploaded_file = st.file_uploader('Choose a CSV file', type='csv')
 if uploaded_file is not None:
-    data = pd.read_csv(uploaded_file)
+    data = pd.read_csv(uploaded_file).drop('Unnamed: 0', axis=1)
     target_column = st.selectbox('Select the target column', data.columns)
     feature_columns = st.multiselect('Select feature columns', data.columns.tolist())
     X = data[feature_columns].values
