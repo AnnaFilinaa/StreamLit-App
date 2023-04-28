@@ -72,12 +72,10 @@ if uploaded_file is not None:
     st.write(weights)
     
     plot_type = st.selectbox('Select plot type', ['Scatterplot', 'Bar plot', 'Line plot'])
-    x_column = st.selectbox('Select x column', feature_columns)
-    y_column = st.selectbox('Select y column', target_column)
     if plot_type == 'Scatterplot':
-        fig = scatterplot(x_column, y_column, data)
+        fig = scatterplot(X, y, data)
     elif plot_type == 'Bar plot':
-        fig = barplot(x_column, y_column, data)
+        fig = barplot(X, y, data)
     else:
-        fig = lineplot(x_column, y_column, data)
+        fig = lineplot(X, y, data)
     st.pyplot(fig)
